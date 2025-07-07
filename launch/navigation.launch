@@ -1,0 +1,12 @@
+<launch>
+  <arg name="model" default="burger"/>
+  <env name="TURTLEBOT3_MODEL" value="$(arg model)"/>
+
+  <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_world.launch"/>
+
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find turtlebot3_navigation)/maps/my_map.yaml" output="screen" />
+
+  <node name="navigator" pkg="turtlebot3_navigation" type="navigator.py" output="screen" respawn="true" />
+
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find turtlebot3_navigation)/rviz/navigation.rviz" />
+</launch>

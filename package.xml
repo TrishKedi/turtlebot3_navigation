@@ -1,0 +1,14 @@
+<package format="2">
+  <name>turtlebot3_navigation</name>
+  <version>0.0.1</version>
+  <description>TurtleBot3 Navigation with A*, Kinematics, and Potential Fields</description>
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>rospy</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>sensor_msgs</depend>
+</package>
